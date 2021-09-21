@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+  <div class="mt-6">
     <slot></slot>
-  </li>
+  </div>
 </template>
 
 <style scoped>
