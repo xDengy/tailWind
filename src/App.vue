@@ -5,6 +5,17 @@ import Badge from './components/UI/Badge.vue';
 import Button from './components/UI/Button.vue';
 import ButtonGroup from './components/UI/ButtonGroup.vue';
 
+//DescriptionList
+import DescriptionList from './components/UI/DescriptionLists/DescriptionList.vue';
+
+//DescriptionListHeader
+import DescriptionListHeader from './components/UI/DescriptionLists/DescriptionListHeader/DescriptionListHeader.vue';
+import DescriptionListHeaderTitle from './components/UI/DescriptionLists/DescriptionListHeader/DescriptionListHeaderTitle.vue';
+import DescriptionListHeaderSubtitle from './components/UI/DescriptionLists/DescriptionListHeader/DescriptionListHeaderSubtitle.vue';
+//DescriptionListHeader
+
+//DescriptionList
+
 import { MailIcon, PlusSmIcon as PlusSmIconSolid } from '@heroicons/vue/solid'
 import { PlusSmIcon as PlusSmIconOutline } from '@heroicons/vue/outline'
 
@@ -235,6 +246,22 @@ const log = (msg) => console.log(msg);
             </svg>
           </Button>
         </ButtonGroup>
+      </div>
+
+      <h2 class="mt-5 mb-1 font-bold text-xl">DescList</h2>
+      <div class="flex">
+        <DescriptionList>
+          <DescriptionListHeader>
+            <DescriptionListHeaderTitle>
+              Applicant Information
+            </DescriptionListHeaderTitle>
+
+            <DescriptionListHeaderSubtitle>
+              Personal details and application.
+            </DescriptionListHeaderSubtitle>
+          </DescriptionListHeader>
+
+        </DescriptionList>
       </div>
     </div>
 </template>
