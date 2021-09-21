@@ -1,11 +1,9 @@
 <script>
-export default {
-  name: "DescriptionList"
-}
+
 </script>
 
 <template>
-  <div class="'bg-white shadow overflow-hidden sm:rounded-lg'">
+  <div class="bg-white shadow overflow-hidden sm:rounded-lg">
     <slot></slot>
   </div>
 </template>

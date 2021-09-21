@@ -3,10 +3,11 @@
 </script>
 
 <template>
-  <div class="px-4 py-5 sm:px-6">
+  <dt class="text-sm font-medium text-gray-500">
     <slot></slot>
-  </div>
+  </dt>
 </template>
+
 
 <style scoped>
 
