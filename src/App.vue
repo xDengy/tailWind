@@ -5,60 +5,6 @@ import Badge from './components/UI/Badge.vue';
 import Button from './components/UI/Button.vue';
 import ButtonGroup from './components/UI/ButtonGroup.vue';
 
-//DescriptionList
-import DescriptionList from './components/UI/DescriptionLists/DescriptionList.vue';
-
-//DescriptionListHeader
-import DescriptionListsHeader from './components/UI/DescriptionLists/DescriptionListsHeader/DescriptionListsHeader.vue';
-import DescriptionListsHeaderTitle
-  from './components/UI/DescriptionLists/DescriptionListsHeader/DescriptionListsHeaderTitle.vue';
-import DescriptionListsHeaderSubtitle
-  from './components/UI/DescriptionLists/DescriptionListsHeader/DescriptionListsHeaderSubtitle.vue';
-//DescriptionListHeader
-
-//DescriptionListsContent
-import DescriptionListsContent
-  from './components/UI/DescriptionLists/DescriptionListsContent/DescriptionListsContent.vue';
-import DescriptionListsItems from './components/UI/DescriptionLists/DescriptionListsContent/DescriptionListsItems.vue';
-import DescriptionListsItem from './components/UI/DescriptionLists/DescriptionListsContent/DescriptionListsItem.vue';
-import DescriptionListsKey from './components/UI/DescriptionLists/DescriptionListsContent/DescriptionListsKey.vue';
-import DescriptionListsValue from './components/UI/DescriptionLists/DescriptionListsContent/DescriptionListsValue.vue';
-//DescriptionListsContent
-
-//DescriptionList
-
-//Stats
-import StatsTitle from './components/UI/Stats/StatsTitle.vue';
-import StatsContent from './components/UI/Stats/StatsContent.vue';
-import StatsItem from './components/UI/Stats/StatsItem.vue';
-import StatsName from './components/UI/Stats/StatsName.vue';
-import StatsStat from './components/UI/Stats/StatsStat.vue';
-//Stats
-
-//StackedList
-import StackedList from './components/UI/StackedList/StackedList.vue';
-import StackedListItem from './components/UI/StackedList/StackedListItem.vue';
-import StackedListContent from './components/UI/StackedList/StackedListContent.vue';
-import StackedListFooter from './components/UI/StackedList/StackedListFooter.vue';
-import StackedListLink from './components/UI/StackedList/StackedListLink.vue';
-import StackedListInfo from './components/UI/StackedList/StackedListInfo.vue';
-
-import Headings from './components/UI/StackedList/Headings/Headings.vue';
-import HeadingsItem from './components/UI/StackedList/Headings/HeadingsItem.vue';
-import HeadingsTitle from './components/UI/StackedList/Headings/HeadingsTitle.vue';
-import HeadingsContent from './components/UI/StackedList/Headings/HeadingsContent.vue';
-import HeadingsContentItem from './components/UI/StackedList/Headings/HeadingsContentItem.vue';
-import HeadingsInfo from './components/UI/StackedList/Headings/HeadingsInfo.vue';
-
-import TwoColumnAvatar from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatar.vue';
-import TwoColumnAvatarList from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarList.vue';
-import TwoColumnAvatarItem from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarItem.vue';
-import TwoColumnAvatarLink from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarLink.vue';
-import TwoColumnAvatarContent from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarContent.vue';
-import TwoColumnAvatarInfo from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarInfo.vue';
-import TwoColumnAvatarIcon from './components/UI/StackedList/TwoColumnAvatar/TwoColumnAvatarIcon.vue';
-//StackedList
-
 import {MailIcon, PlusSmIcon as PlusSmIconSolid} from '@heroicons/vue/solid'
 import {PlusSmIcon as PlusSmIconOutline} from '@heroicons/vue/outline'
 
@@ -66,37 +12,104 @@ const log = (msg) => console.log(msg);
 </script>
 
 <script>
-import {ArrowSmDownIcon, ArrowSmUpIcon} from '@heroicons/vue/solid'
-import {CursorClickIcon, MailOpenIcon, UsersIcon} from '@heroicons/vue/outline'
-import {PaperClipIcon} from '@heroicons/vue/solid'
-import {CheckCircleIcon, ChevronRightIcon, MailIcon} from '@heroicons/vue/solid'
+import {CursorClickIcon, MailOpenIcon, UsersIcon} from "@heroicons/vue/outline";
+import {
+  ArrowSmDownIcon,
+  ArrowSmUpIcon,
+  CheckCircleIcon,
+  ChevronRightIcon,
+  MailIcon,
+  PaperClipIcon
+} from "@heroicons/vue/solid";
 
 const stats = [
-  {id: 1, name: 'Total Subscribers', stat: '71,897', icon: UsersIcon, change: '122', changeType: 'increase'},
-  {id: 2, name: 'Avg. Open Rate', stat: '58.16%', icon: MailOpenIcon, change: '5.4%', changeType: 'increase'},
-  {id: 3, name: 'Avg. Click Rate', stat: '24.57%', icon: CursorClickIcon, change: '3.2%', changeType: 'decrease'},
+  {
+    id: 1,
+    label: 'Total Subscribers',
+    value: '71,897',
+    difference: {
+      type: 'increase',
+      value: '122',
+    },
+    icon: UsersIcon,
+    link: {
+      title: 'show all',
+      href: '/sdfsdf/sdfsdf'
+    }
+  },
+  {
+    id: 2,
+    label: 'Avg. Open Rate',
+    value: '58.16%',
+    difference: {
+      type: 'increase',
+      value: '5.4%',
+    },
+    icon: MailOpenIcon,
+    link: {
+      title: 'show all',
+      href: '/sdfsdf/sdfsdf'
+    }
+  },
+  {
+    id: 3,
+    label: 'Avg. Click Rate',
+    value: '24.57%',
+    difference: {
+      type: 'decrease',
+      value: '3.2%',
+    },
+    icon: CursorClickIcon,
+    link: {
+      title: 'show all',
+      href: '/sdfsdf/sdfsdf'
+    }
+  },
 ]
-const people = [
+const peopleEmail = [
   {
     name: 'Calvin Hawkins',
     email: 'calvin.hawkins@example.com',
-    handle: 'calvin.hawkins',
     image:
         'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Kristen Ramos',
     email: 'kristen.ramos@example.com',
-    handle: 'kristen.ramos',
     image:
         'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Ted Fox',
     email: 'ted.fox@example.com',
-    handle: 'ted.fox',
     image:
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+]
+const peopleHandle = [
+  {
+    name: 'Leonard Krasner',
+    handle: 'leonardkrasner',
+    imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Floyd Miles',
+    handle: 'floydmiles',
+    imageUrl:
+        'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Emily Selman',
+    handle: 'emilyselman',
+    imageUrl:
+        'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Kristin Watson',
+    handle: 'kristinwatson',
+    imageUrl:
+        'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
 ]
 const announcements = [
@@ -418,10 +431,12 @@ export default {
     ChevronRightIcon,
     MailIcon,
   },
-  setup() {
+  setup()
+  {
     return {
       stats,
-      people,
+      peopleEmail,
+      peopleHandle,
       announcements,
       messages,
       directory,
@@ -669,13 +684,13 @@ export default {
     <div class="flex mx-auto max-w-4xl">
       <DescriptionList>
         <DescriptionListsHeader>
-          <DescriptionListsHeaderTitle>
+          <DescriptionListsTitle>
             Applicant Information
-          </DescriptionListsHeaderTitle>
+          </DescriptionListsTitle>
 
-          <DescriptionListsHeaderSubtitle>
+          <DescriptionListsSubtitle>
             Personal details and application.
-          </DescriptionListsHeaderSubtitle>
+          </DescriptionListsSubtitle>
         </DescriptionListsHeader>
 
         <DescriptionListsContent>
@@ -778,13 +793,13 @@ export default {
     <div class="flex mx-auto max-w-4xl">
       <DescriptionList>
         <DescriptionListsHeader>
-          <DescriptionListsHeaderTitle>
+          <DescriptionListsTitle>
             Applicant Information
-          </DescriptionListsHeaderTitle>
+          </DescriptionListsTitle>
 
-          <DescriptionListsHeaderSubtitle>
+          <DescriptionListsSubtitle>
             Personal details and application.
-          </DescriptionListsHeaderSubtitle>
+          </DescriptionListsSubtitle>
         </DescriptionListsHeader>
 
         <DescriptionListsContent type="column">
@@ -892,12 +907,12 @@ export default {
       </StatsTitle>
 
       <StatsContent type="simple">
-        <StatsItem v-for="item in stats" :key="item.name" type="simple">
+        <StatsItem v-for="item in stats" :key="item.label" type="simple">
           <StatsName type="simple">
-            {{ item.name }}
+            {{ item.label }}
           </StatsName>
           <StatsStat type="simple">
-            {{ item.stat }}
+            {{ item.value }}
           </StatsStat>
         </StatsItem>
       </StatsContent>
@@ -915,24 +930,24 @@ export default {
             <div class="absolute bg-indigo-500 rounded-md p-3">
               <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true"/>
             </div>
-            <p class="ml-16 text-sm font-medium text-gray-500 truncate">{{ item.name }}</p>
+            <p class="ml-16 text-sm font-medium text-gray-500 truncate">{{ item.label }}</p>
           </StatsName>
           <StatsStat type="icon">
             <p class="text-2xl font-semibold text-gray-900">
-              {{ item.stat }}
+              {{ item.value }}
             </p>
-            <p :class="[item.changeType === 'increase' ? 'text-green-600' : 'text-red-600', 'ml-2 flex items-baseline text-sm font-semibold']">
-              <ArrowSmUpIcon v-if="item.changeType === 'increase'"
+            <p :class="[item.difference.type === 'increase' ? 'text-green-600' : 'text-red-600', 'ml-2 flex items-baseline text-sm font-semibold']">
+              <ArrowSmUpIcon v-if="item.difference.type === 'increase'"
                              class="self-center flex-shrink-0 h-5 w-5 text-green-500" aria-hidden="true"/>
               <ArrowSmDownIcon v-else class="self-center flex-shrink-0 h-5 w-5 text-red-500" aria-hidden="true"/>
-              <span class="sr-only"> {{ item.changeType === 'increase' ? 'Increased' : 'Decreased' }} by </span>
-              {{ item.change }}
+              <span class="sr-only"> {{ item.difference.type === 'increase' ? 'Increased' : 'Decreased' }} by </span>
+              {{ item.difference.value }}
             </p>
             <div class="absolute bottom-0 inset-x-0 bg-gray-50 px-4 py-4 sm:px-6">
               <div class="text-sm">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                <a :href="item.link" class="font-medium text-indigo-600 hover:text-indigo-500">
                   View all
-                  <span class="sr-only"> {{ item.name }} stats</span>
+                  <span class="sr-only"> {{ item.label }} stats</span>
                 </a>
               </div>
             </div>
@@ -944,99 +959,27 @@ export default {
     <!-- Stacked List -->
     <h2 class="mt-5 mb-1 font-bold text-xl">Stacked List</h2>
     <h5 class="mt-5 mb-1 font-bold text-m">Narrow with avatar group</h5>
-    <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
-      <StackedList type="avatar">
-        <StackedListItem v-for="person in people" :key="person.email" type="avatar">
-          <img class="h-10 w-10 rounded-full" :src="person.image" alt=""/>
-          <div class="ml-3">
-            <p class="text-sm font-medium text-gray-900">{{ person.name }}</p>
-            <p class="text-sm text-gray-500">{{ person.email }}</p>
-          </div>
-        </StackedListItem>
-      </StackedList>
+    <div class="max-w-md mx-auto py-12 px-4 sm:px-0 md:py-16">
+      <StackedListNarrow :items="peopleEmail" :arrayName="'peopleEmail'" />
     </div>
 
     <h5 class="mt-5 mb-1 font-bold text-m">Avatar groups with actions</h5>
     <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
-      <StackedListContent>
-        <StackedList type="avatar">
-          <StackedListItem v-for="person in people" :key="person.email" type="none">
-            <StackedListInfo type="avatar">
-              <div class="flex-shrink-0">
-                <img class="h-8 w-8 rounded-full" :src="person.image" alt=""/>
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-medium text-gray-900 truncate">
-                  {{ person.name }}
-                </p>
-                <p class="text-sm text-gray-500 truncate">
-                  {{ '@' + person.handle }}
-                </p>
-              </div>
-              <div>
-                <a href="#"
-                   class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
-                  View
-                </a>
-              </div>
-            </StackedListInfo>
-          </StackedListItem>
-        </StackedList>
-      </StackedListContent>
-      <StackedListFooter>
-        <StackedListLink>
-          View all
-        </StackedListLink>
-      </StackedListFooter>
+      <div class="flow-root mt-6">
+        <StackedListNarrow :items="peopleHandle" :arrayName="'peopleHandle'" />
+      </div>
     </div>
 
     <h5 class="mt-5 mb-1 font-bold text-m">Content links with action</h5>
     <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
-      <StackedListContent>
-        <StackedList type=" action">
-          <StackedListItem v-for="announcement in announcements" :key="announcement.id" type="none">
-            <StackedListInfo type="action">
-              <h3 class="text-sm font-semibold text-gray-800">
-                <a href="#" class="hover:underline focus:outline-none">
-                  <span class="absolute inset-0" aria-hidden="true"/>
-                  {{ announcement.title }}
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-600 line-clamp-2">
-                {{ announcement.preview }}
-              </p>
-            </StackedListInfo>
-          </StackedListItem>
-        </StackedList>
-      </StackedListContent>
-      <StackedListFooter>
-        <StackedListLink>
-          View all
-        </StackedListLink>
-      </StackedListFooter>
+      <div class="flow-root mt-6">
+        <StackedListNarrow :items="announcements" :arrayName="'announcements'" />
+      </div>
     </div>
 
     <h5 class="mt-5 mb-1 font-bold text-m">With truncated content preview</h5>
     <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
-      <StackedList type="action">
-        <StackedListItem v-for="message in messages" :key="message.id" type="action">
-          <StackedListInfo type="preview">
-            <div class="min-w-0 flex-1">
-              <a href="#" class="block focus:outline-none">
-                <span class="absolute inset-0" aria-hidden="true"/>
-                <p class="text-sm font-medium text-gray-900 truncate">{{ message.sender }}</p>
-                <p class="text-sm text-gray-500 truncate">{{ message.subject }}</p>
-              </a>
-            </div>
-            <time :datetime="message.datetime" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">
-              {{ message.time }}
-            </time>
-          </StackedListInfo>
-          <StackedListPreview>
-            {{ message.preview }}
-          </StackedListPreview>
-        </StackedListItem>
-      </StackedList>
+      <StackedListNarrow :items="messages" :arrayName="'messages'" />
     </div>
 
     <h5 class="mt-5 mb-1 font-bold text-m">With sticky headings</h5>
@@ -1114,6 +1057,7 @@ export default {
         </TwoColumnAvatarList>
       </TwoColumnAvatar>
     </div>
+
   </div>
 </template>
 
