@@ -1,119 +1,56 @@
+<script setup>
+import Headings from '.././UI/StackedList/Headings.vue'
+import StackedList from '.././UI/StackedList/StackedList.vue'
+import TwoColumnAvatar from '.././UI/StackedList/TwoColumnAvatar.vue'
+</script>
+
 <script>
-import {
-  ArrowSmDownIcon,
-  ArrowSmUpIcon,
-  CheckCircleIcon,
-  ChevronRightIcon,
-  MailIcon,
-  PaperClipIcon
-} from "@heroicons/vue/solid";
-import DescriptionList from "./Examples/DescriptionLists/DescriptionList.vue";
-import DescriptionListsHeader
-  from "./Examples/DescriptionLists/DescriptionListsHeader.vue"
-import DescriptionListsTitle from "./Examples/DescriptionLists/DescriptionListsTitle.vue"
-import DescriptionListsSubtitle
-  from "./Examples/DescriptionLists/DescriptionListsSubtitle.vue"
-import DescriptionListsContent
-  from "./Examples/DescriptionLists/DescriptionListsContent.vue"
-import StackedList from "./Examples/StackedList/StackedList.vue"
-import DescriptionListsItems
-  from "./Examples/DescriptionLists/DescriptionListsItems.vue"
-import DescriptionListsItem from "./Examples/DescriptionLists/DescriptionListsItem.vue"
-import DescriptionListsKey from "./Examples/DescriptionLists/DescriptionListsKey.vue"
-import DescriptionListsValue
-  from "./Examples/DescriptionLists/DescriptionListsValue.vue"
-import StatsTitle from "./Examples/Stats/StatsTitle.vue"
-import StatsContent from "./Examples/Stats/StatsContent.vue"
-import StackedListContent from "./Examples/StackedList/StackedListContent.vue"
-import StackedListPreview from "./Examples/StackedList/StackedListPreview.vue"
-import StatsName from "./Examples/Stats/StatsName.vue"
-import StatsStat from "./Examples/Stats/StatsStat.vue"
-import StackedListItem from "./Examples/StackedList/StackedListItem.vue"
-import StatsItem from "./Examples/Stats/StatsItem.vue"
-import StackedListFooter from "./Examples/StackedList/StackedListFooter.vue"
-import StackedListLink from "./Examples/StackedList/StackedListLink.vue"
-import StackedListInfo from "./Examples/StackedList/StackedListInfo.vue"
-import StackedListNarrow from "./Examples/StackedList/StackedListNarrow.vue"
-import Headings from "./Examples/StackedList/Headings/Headings.vue"
-import HeadingsItem from "./Examples/StackedList/Headings/HeadingsItem.vue"
-import HeadingsTitle from "./Examples/StackedList/Headings/HeadingsTitle.vue"
-import HeadingsContent from "./Examples/StackedList/Headings/HeadingsContent.vue"
-import HeadingsContentItem from "./Examples/StackedList/Headings/HeadingsContentItem.vue"
-import HeadingsInfo from "./Examples/StackedList/Headings/HeadingsInfo.vue"
-import TwoColumnAvatar from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatar.vue"
-import TwoColumnAvatarList from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarList.vue"
-import TwoColumnAvatarItem from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarItem.vue"
-import TwoColumnAvatarLink from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarLink.vue"
-import TwoColumnAvatarContent from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarContent.vue"
-import TwoColumnAvatarInfo from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarInfo.vue"
-import TwoColumnAvatarIcon from "./Examples/StackedList/TwoColumnAvatar/TwoColumnAvatarIcon.vue"
 import {CursorClickIcon, MailOpenIcon, UsersIcon} from "@heroicons/vue/outline";
 
-const stats = [
-  {
-    id: 1,
-    label: 'Total Subscribers',
-    value: '71,897',
-    difference: {
-      type: 'increase',
-      value: '122',
-    },
-    icon: UsersIcon,
-    link: {
-      title: 'show all',
-      href: '/sdfsdf/sdfsdf'
-    }
-  },
-  {
-    id: 2,
-    label: 'Avg. Open Rate',
-    value: '58.16%',
-    difference: {
-      type: 'increase',
-      value: '5.4%',
-    },
-    icon: MailOpenIcon,
-    link: {
-      title: 'show all',
-      href: '/sdfsdf/sdfsdf'
-    }
-  },
-  {
-    id: 3,
-    label: 'Avg. Click Rate',
-    value: '24.57%',
-    difference: {
-      type: 'decrease',
-      value: '3.2%',
-    },
-    icon: CursorClickIcon,
-    link: {
-      title: 'show all',
-      href: '/sdfsdf/sdfsdf'
-    }
-  },
-]
-const people = [
+const peopleEmail = [
   {
     name: 'Calvin Hawkins',
     email: 'calvin.hawkins@example.com',
-    handle: 'calvin.hawkins',
     image:
         'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Kristen Ramos',
     email: 'kristen.ramos@example.com',
-    handle: 'kristen.ramos',
     image:
         'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Ted Fox',
     email: 'ted.fox@example.com',
-    handle: 'ted.fox',
     image:
         'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+]
+const peopleHandle = [
+  {
+    name: 'Leonard Krasner',
+    handle: 'leonardkrasner',
+    imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Floyd Miles',
+    handle: 'floydmiles',
+    imageUrl:
+        'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Emily Selman',
+    handle: 'emilyselman',
+    imageUrl:
+        'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Kristin Watson',
+    handle: 'kristinwatson',
+    imageUrl:
+        'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
 ]
 const announcements = [
@@ -428,31 +365,60 @@ const applications = [
 
 export default {
   components: {
-    ArrowSmDownIcon,
-    ArrowSmUpIcon,
-    PaperClipIcon,
-    CheckCircleIcon,
-    ChevronRightIcon,
-    MailIcon,
-    DescriptionList, DescriptionListsHeader, DescriptionListsTitle,
-    DescriptionListsSubtitle, DescriptionListsContent, StackedList,
-    DescriptionListsItems, DescriptionListsItem, DescriptionListsKey,
-    DescriptionListsValue, StatsTitle, StatsContent,
-    StackedListContent, StatsName, StatsStat, StackedListItem,
-    StatsItem, StackedListFooter, StackedListLink, StackedListInfo,
-    StackedListNarrow, Headings, HeadingsItem, HeadingsTitle,
-    HeadingsContent, HeadingsContentItem, HeadingsInfo, TwoColumnAvatar,
-    TwoColumnAvatarList, TwoColumnAvatarItem, TwoColumnAvatarLink, TwoColumnAvatarContent,
-    TwoColumnAvatarInfo, TwoColumnAvatarIcon, StackedListPreview,
-    stats,
-    people,
-    announcements,
-    messages,
-    directory,
-    applications,
+    CursorClickIcon,
+    MailOpenIcon,
+    UsersIcon
+  },
+  setup()
+  {
+    return {
+      peopleEmail,
+      peopleHandle,
+      announcements,
+      messages,
+      directory,
+      applications,
+    }
   },
 }
 </script>
+
+<template>
+  <h2 class="mt-5 mb-1 font-bold text-xl">Stacked List</h2>
+  <h5 class="mt-5 mb-1 font-bold text-m">Narrow with avatar group</h5>
+  <div class="max-w-md mx-auto py-12 px-4 sm:px-0 md:py-16">
+    <StackedList :items="peopleEmail" :arrayName="'peopleEmail'" />
+  </div>
+
+  <h5 class="mt-5 mb-1 font-bold text-m">Avatar groups with actions</h5>
+  <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
+    <div class="flow-root mt-6">
+      <StackedList :items="peopleHandle" :arrayName="'peopleHandle'" />
+    </div>
+  </div>
+
+  <h5 class="mt-5 mb-1 font-bold text-m">Content links with action</h5>
+  <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
+    <div class="flow-root mt-6">
+      <StackedList :items="announcements" :arrayName="'announcements'" />
+    </div>
+  </div>
+
+  <h5 class="mt-5 mb-1 font-bold text-m">With truncated content preview</h5>
+  <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
+    <StackedList :items="messages" :arrayName="'messages'" />
+  </div>
+
+  <h5 class="mt-5 mb-1 font-bold text-m">Two-column with avatar</h5>
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <TwoColumnAvatar :items="applications" :arrayName="'applications'" />
+  </div>
+
+  <h5 class="mt-5 mb-1 font-bold text-m">With sticky headings</h5>
+  <div class="max-w-xl mx-auto sm:px-6 lg:px-8" style="height: 26rem;">
+    <Headings :items="directory" />
+  </div>
+</template>
 
 <style scoped>
 

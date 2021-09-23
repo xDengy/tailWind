@@ -15,33 +15,38 @@ const styles = [
 if (props.arrayName === 'peopleHandle' && props.arrayName === 'announcements') {
   styles.push('-my-5');
 }
+const applicationsStyles = [];
+if (props.arrayName === 'applications') {
+  applicationsStyles.push('bg-white shadow overflow-hidden sm:rounded-md');
+}
 </script>
 
 <template>
   <ul role="list" :class="styles">
     <li class="py-4 flex" v-for="item in props.items" v-if="props.arrayName === 'peopleEmail'" :key="item.email">
-      <img class="h-10 w-10 rounded-full" :src="item.image" alt=""/>
+      <img class="h-10 w-10 rounded-full" :src="item.image ?? ''" alt=""/>
       <div class="ml-3">
-        <p class="text-sm font-medium text-gray-900">{{ item.name }}</p>
-        <p class="text-sm text-gray-500">{{ item.email }}</p>
+        <p class="text-sm font-medium text-gray-900">{{ item.name ?? '' }}</p>
+        <p class="text-sm text-gray-500">{{ item.email ?? '' }}</p>
       </div>
     </li>
 
     <li class="py-4" v-for="item in props.items" v-else-if="props.arrayName === 'peopleHandle'" :key="item.handle">
       <div class="flex items-center space-x-4">
         <div class="flex-shrink-0">
-          <img class="h-8 w-8 rounded-full" :src="item.imageUrl" alt="" />
+          <img class="h-8 w-8 rounded-full" :src="item.imageUrl ?? ''" alt=""/>
         </div>
         <div class="flex-1 min-w-0">
           <p class="text-sm font-medium text-gray-900 truncate">
-            {{ item.name }}
+            {{ item.name ?? '' }}
           </p>
           <p class="text-sm text-gray-500 truncate">
-            {{ '@' + item.handle }}
+            {{ '@' + item.handle ?? '' }}
           </p>
         </div>
         <div>
-          <a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+          <a href="#"
+             class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
             View
           </a>
         </div>
@@ -54,11 +59,11 @@ if (props.arrayName === 'peopleHandle' && props.arrayName === 'announcements') {
         <h3 class="text-sm font-semibold text-gray-800">
           <a href="#" class="hover:underline focus:outline-none">
             <span class="absolute inset-0" aria-hidden="true"/>
-            {{ item.title }}
+            {{ item.title ?? '' }}
           </a>
         </h3>
         <p class="mt-1 text-sm text-gray-600 line-clamp-2">
-          {{ item.preview }}
+          {{ item.preview ?? '' }}
         </p>
       </div>
     </li>
@@ -69,24 +74,25 @@ if (props.arrayName === 'peopleHandle' && props.arrayName === 'announcements') {
         <div class="min-w-0 flex-1">
           <a href="#" class="block focus:outline-none">
             <span class="absolute inset-0" aria-hidden="true"/>
-            <p class="text-sm font-medium text-gray-900 truncate">{{ item.sender }}</p>
-            <p class="text-sm text-gray-500 truncate">{{ item.subject }}</p>
+            <p class="text-sm font-medium text-gray-900 truncate">{{ item.sender ?? '' }}</p>
+            <p class="text-sm text-gray-500 truncate">{{ item.subject ?? '' }}</p>
           </a>
         </div>
-        <time :datetime="item.datetime" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">
-          {{ item.time }}
+        <time :datetime="item.datetime ?? ''" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">
+          {{ item.time ?? '' }}
         </time>
       </div>
       <div class="mt-1">
         <p class="line-clamp-2 text-sm text-gray-600">
-          {{ item.preview }}
+          {{ item.preview ?? '' }}
         </p>
       </div>
     </li>
   </ul>
 
   <div class="mt-6" v-if="props.arrayName === 'peopleHandle' && props.arrayName === 'announcement'">
-    <a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+    <a href="#"
+       class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
       View all
     </a>
   </div>
