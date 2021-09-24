@@ -38,8 +38,8 @@ export default {
       </DescriptionListsHeader>
 
       <DescriptionListsContent>
-        <DescriptionListsItems type="left">
-          <DescriptionListsItem type="left">
+        <DescriptionListsItems>
+          <DescriptionListsItem>
             <DescriptionListsKey>
               Full name
             </DescriptionListsKey>
@@ -49,7 +49,7 @@ export default {
             </DescriptionListsValue>
           </DescriptionListsItem>
 
-          <DescriptionListsItem type="left">
+          <DescriptionListsItem>
             <DescriptionListsKey>
               Application for
             </DescriptionListsKey>
@@ -59,7 +59,7 @@ export default {
             </DescriptionListsValue>
           </DescriptionListsItem>
 
-          <DescriptionListsItem type="left">
+          <DescriptionListsItem>
             <DescriptionListsKey>
               Email address
             </DescriptionListsKey>
@@ -69,7 +69,7 @@ export default {
             </DescriptionListsValue>
           </DescriptionListsItem>
 
-          <DescriptionListsItem type="left">
+          <DescriptionListsItem>
             <DescriptionListsKey>
               Salary expectation
             </DescriptionListsKey>
@@ -79,7 +79,7 @@ export default {
             </DescriptionListsValue>
           </DescriptionListsItem>
 
-          <DescriptionListsItem type="left">
+          <DescriptionListsItem>
             <DescriptionListsKey>
               About
             </DescriptionListsKey>
@@ -91,7 +91,7 @@ export default {
             </DescriptionListsValue>
           </DescriptionListsItem>
 
-          <DescriptionListsItem type="left">
+          <DescriptionListsItem>
             <DescriptionListsKey>
               Attachments
             </DescriptionListsKey>

@@ -3,7 +3,7 @@ const props = defineProps({
   type: {
     type: String,
     required: false,
-    default: 'Left',
+    default: 'left',
   }
 });
 const styles = [
