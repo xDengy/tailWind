@@ -375,26 +375,26 @@ const applications = [
   <h2 class="mt-5 mb-1 font-bold text-xl">Stacked List</h2>
   <h5 class="mt-5 mb-1 font-bold text-m">Narrow with avatar group</h5>
   <div class="max-w-md mx-auto py-12 px-4 sm:px-0 md:py-16">
-    <StackedList :obj="peopleEmail" :items="peopleEmail" arrayName="peopleEmail" />
+    <StackedList :items="peopleEmail" />
   </div>
 
   <h5 class="mt-5 mb-1 font-bold text-m">Avatar groups with actions</h5>
   <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
     <div class="flow-root mt-6">
-      <StackedList :obj="peopleHandle" :items="peopleHandle" :arrayName="'peopleHandle'" />
+      <StackedList :items="peopleHandle" />
     </div>
   </div>
 
   <h5 class="mt-5 mb-1 font-bold text-m">Content links with action</h5>
   <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
     <div class="flow-root mt-6">
-      <StackedList :obj="announcements" :items="announcements" :arrayName="'announcements'" />
+      <StackedList :items="announcements" />
     </div>
   </div>
 
   <h5 class="mt-5 mb-1 font-bold text-m">With truncated content preview</h5>
   <div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
-    <StackedList :obj="messages" :items="messages" :arrayName="'messages'" />
+    <StackedList :items="messages" />
   </div>
 
   <h5 class="mt-5 mb-1 font-bold text-m">Two-column with avatar</h5>

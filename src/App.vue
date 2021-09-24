@@ -13,6 +13,8 @@ import StackedList from './components/Examples/StackedList.vue';
 import StatsContent from './components/Examples/StatsContent.vue';
 import GridList from './components/Examples/GridList.vue';
 import Feeds from './components/Examples/Feeds.vue';
+import EmptyStates from './components/Examples/EmptyStates.vue';
+import Avatars from './components/Examples/Avatars.vue';
 
 const log = (msg) => console.log(msg);
 </script>
@@ -258,6 +260,10 @@ const log = (msg) => console.log(msg);
     <GridList />
 
     <Feeds />
+
+    <EmptyStates />
+
+    <Avatars />
     </div>
 </template>
 
