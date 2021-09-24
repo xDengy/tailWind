@@ -5,9 +5,7 @@ const props = defineProps({
     required: true,
   },
 });
-</script>
 
-<script>
 import {
   AcademicCapIcon,
   BadgeCheckIcon,
@@ -16,17 +14,6 @@ import {
   ReceiptRefundIcon,
   UsersIcon,
 } from '@heroicons/vue/outline'
-
-export default {
-  components: {
-    AcademicCapIcon,
-    BadgeCheckIcon,
-    CashIcon,
-    ClockIcon,
-    ReceiptRefundIcon,
-    UsersIcon,
-  },
-}
 </script>
 
 <template>

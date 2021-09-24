@@ -8,18 +8,7 @@ import DescriptionListsKey from '.././UI/DescriptionLists/DescriptionListsKey.vu
 import DescriptionListsSubtitle from '.././UI/DescriptionLists/DescriptionListsSubtitle.vue'
 import DescriptionListsTitle from '.././UI/DescriptionLists/DescriptionListsTitle.vue'
 import DescriptionListsValue from '.././UI/DescriptionLists/DescriptionListsValue.vue'
-</script>
-
-<script>
-import {
-  PaperClipIcon
-} from "@heroicons/vue/solid";
-
-export default {
-  components: {
-    PaperClipIcon
-  },
-}
+import {PaperClipIcon} from "@heroicons/vue/solid";
 </script>
 
 <template>

@@ -1,13 +1,6 @@
 <script setup>
 import Feeds from '.././UI/Feeds/Feeds.vue'
-</script>
-
-<script>
-import {
-  CheckIcon,
-  ThumbUpIcon,
-  UserIcon
-} from "@heroicons/vue/outline";
+import {CheckIcon, ThumbUpIcon, UserIcon} from "@heroicons/vue/outline";
 
 const simple = [
   {
@@ -62,11 +55,11 @@ const simple = [
   },
 ]
 const stacked = [
-  { id: 1, person: { name: 'Eduardo Benz', imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
+  { id: 1, person: { name: 'Eduardo Benz', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
     project: 'Workcation', commit: '2d89f0c8', environment: 'production', time: '1h' },
-  { id: 2, person: { name: 'Eduardo Benz', imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
+  { id: 2, person: { name: 'Eduardo Benz', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
     project: 'Workcation', commit: '2d89f0c8', environment: 'production', time: '1h' },
-  { id: 3, person: { name: 'Eduardo Benz', imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
+  { id: 3, person: { name: 'Eduardo Benz', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80', },
     project: 'Workcation', commit: '2d89f0c8', environment: 'production', time: '1h' },
 ]
 const multiple = [
@@ -74,7 +67,7 @@ const multiple = [
     id: 1,
     type: 'comment',
     person: { name: 'Eduardo Benz', href: '#' },
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     comment:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
@@ -101,27 +94,13 @@ const multiple = [
     id: 4,
     type: 'comment',
     person: { name: 'Jason Meyers', href: '#' },
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     comment:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt condimentum. Nisl ultrices eu venenatis diam.',
     date: '2h ago',
   },
 ]
-export default {
-  components: {
-    CheckIcon,
-    ThumbUpIcon,
-    UserIcon
-  },
-  setup() {
-    return {
-      simple,
-      stacked,
-      multiple,
-    }
-  },
-}
 </script>
 
 <template>

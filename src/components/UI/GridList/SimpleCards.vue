@@ -5,16 +5,8 @@ const props = defineProps({
     required: true,
   },
 });
-</script>
 
-<script>
 import {DotsVerticalIcon} from "@heroicons/vue/outline";
-
-export default {
-  components: {
-    DotsVerticalIcon,
-  },
-}
 </script>
 
 <template>

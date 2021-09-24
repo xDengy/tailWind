@@ -9,22 +9,12 @@ const props = defineProps({
     required: true,
   },
 });
-</script>
 
-<script>
-  import {
+import {
   CheckCircleIcon,
   ChevronRightIcon,
   MailIcon,
 } from "@heroicons/vue/solid";
-
-  export default {
-  components: {
-  CheckCircleIcon,
-  ChevronRightIcon,
-  MailIcon,
-},
-}
 </script>
 
 <template>
@@ -35,7 +25,7 @@ const props = defineProps({
           <div class="flex items-center px-4 py-4 sm:px-6">
             <div class="min-w-0 flex-1 flex items-center">
               <div class="flex-shrink-0">
-                <img class="h-12 w-12 rounded-full" :src="item.applicant.imageUrl" alt=""/>
+                <img class="h-12 w-12 rounded-full" :src="item.applicant.image" alt=""/>
               </div>
               <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
                 <div>

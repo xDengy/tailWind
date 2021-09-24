@@ -2,10 +2,7 @@
 import Cards from '.././UI/GridList/Cards.vue'
 import SimpleCards from '.././UI/GridList/SimpleCards.vue'
 import HorizontalLinkCards from '.././UI/GridList/HorizontalLinkCards.vue'
-import Actions from '.././UI/GridList/Actions.vue'
-</script>
-
-<script>
+import ActionCards from '.././UI/GridList/ActionCards.vue'
 import {
   AcademicCapIcon,
   BadgeCheckIcon,
@@ -24,7 +21,7 @@ const peopleRoles = [
     role: 'Admin',
     email: 'janecooper@example.com',
     telephone: '+1-202-555-0170',
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
@@ -33,7 +30,7 @@ const peopleRoles = [
     role: 'Admin',
     email: 'janecooper@example.com',
     telephone: '+1-202-555-0170',
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
@@ -42,7 +39,7 @@ const peopleRoles = [
     role: 'Admin',
     email: 'janecooper@example.com',
     telephone: '+1-202-555-0170',
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
@@ -51,7 +48,7 @@ const peopleRoles = [
     role: 'Admin',
     email: 'janecooper@example.com',
     telephone: '+1-202-555-0170',
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
@@ -60,7 +57,7 @@ const peopleRoles = [
     role: 'Admin',
     email: 'janecooper@example.com',
     telephone: '+1-202-555-0170',
-    imageUrl:
+    image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
 ]
@@ -134,27 +131,6 @@ const actions = [
     iconBackground: 'bg-indigo-50',
   },
 ]
-
-export default {
-  components: {
-    AcademicCapIcon,
-    BadgeCheckIcon,
-    CashIcon,
-    ClockIcon,
-    MailIcon,
-    PhoneIcon,
-    ReceiptRefundIcon,
-    UsersIcon
-  },
-  setup() {
-    return {
-      peopleRoles,
-      files,
-      projects,
-      actions,
-    }
-  },
-}
 </script>
 
 <template>
@@ -186,7 +162,7 @@ export default {
 
   <h5 class="mt-5 mb-1 font-bold text-m">Actions with shared borders</h5>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <Actions :items="actions"/>
+    <ActionCards :items="actions"/>
   </div>
 
 </template>

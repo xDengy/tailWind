@@ -30,17 +30,7 @@ if (props.arrayName === 'ContactCards') {
 if (props.arrayName === 'Images') {
   liStyles.push('relative');
 }
-</script>
-
-<script>
 import {MailIcon, PhoneIcon} from "@heroicons/vue/outline";
-
-export default {
-  components: {
-    MailIcon,
-    PhoneIcon,
-  },
-}
 </script>
 
 <template>
@@ -54,7 +44,7 @@ export default {
           </div>
           <p class="mt-1 text-gray-500 text-sm truncate">{{ item.title }}</p>
         </div>
-        <img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" :src="item.imageUrl" alt="" />
+        <img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" :src="item.image" alt="" />
       </div>
       <div>
         <div class="-mt-px flex divide-x divide-gray-200">
@@ -76,7 +66,7 @@ export default {
 
     <li v-for="item in props.items" :key="item.email" :class="liStyles" v-else-if="props.arrayName === 'ContactCards'">
       <div class="flex-1 flex flex-col p-8">
-        <img class="w-32 h-32 flex-shrink-0 mx-auto rounded-full" :src="item.imageUrl" alt="" />
+        <img class="w-32 h-32 flex-shrink-0 mx-auto rounded-full" :src="item.image" alt="" />
         <h3 class="mt-6 text-gray-900 text-sm font-medium">{{ item.name }}</h3>
         <dl class="mt-1 flex-grow flex flex-col justify-between">
           <dt class="sr-only">Title</dt>

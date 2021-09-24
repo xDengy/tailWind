@@ -10,7 +10,7 @@ const props = defineProps({
   },
 });
 const divStyles = [];
-if (props.arrayName === 'Simple' && props.arrayName === 'Images') {
+if (props.arrayName === 'Simple' || props.arrayName === 'Images') {
   divStyles.push('flow-root');
 }
 if (props.arrayName === 'Stacked') {
@@ -18,28 +18,15 @@ if (props.arrayName === 'Stacked') {
 }
 
 const ulStyles = [];
-if (props.arrayName === 'Simple' && props.arrayName === 'Multiple') {
+if (props.arrayName === 'Simple' || props.arrayName === 'Multiple') {
   ulStyles.push('-mb-8');
 }
 if (props.arrayName === 'Stacked') {
   ulStyles.push('divide-y divide-gray-200');
 }
-</script>
 
-<script>
 import {CheckIcon, ThumbUpIcon, UserIcon} from '@heroicons/vue/solid'
 import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
-
-export default {
-  components: {
-    CheckIcon,
-    ThumbUpIcon,
-    UserIcon,
-    ChatAltIcon,
-    TagIcon,
-    UserCircleIcon
-  },
-}
 </script>
 
 <template>
@@ -70,7 +57,7 @@ export default {
 
       <li v-for="item in props.items" :key="item.id" class="py-4" v-else-if="props.arrayName === 'Stacked'">
         <div class="flex space-x-3">
-          <img class="h-6 w-6 rounded-full" :src="item.person.imageUrl" alt="" />
+          <img class="h-6 w-6 rounded-full" :src="item.person.image" alt="" />
           <div class="flex-1 space-y-1">
             <div class="flex items-center justify-between">
               <h3 class="text-sm font-medium">{{ item.person.name }}</h3>
@@ -87,7 +74,7 @@ export default {
           <div class="relative flex items-start space-x-3">
             <template v-if="item.type === 'comment'">
               <div class="relative">
-                <img class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" :src="item.imageUrl" alt="" />
+                <img class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" :src="item.image" alt="" />
 
                 <span class="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
                   <ChatAltIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
