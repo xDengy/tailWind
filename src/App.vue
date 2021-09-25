@@ -15,6 +15,14 @@ import GridList from './components/Examples/GridList.vue';
 import Feeds from './components/Examples/Feeds.vue';
 import EmptyStates from './components/Examples/EmptyStates.vue';
 import Avatars from './components/Examples/Avatars.vue';
+import Steps from './components/Examples/Steps.vue';
+import Navigation from './components/Examples/Navigation.vue';
+import Alerts from './components/Examples/Alerts.vue';
+import ActionPanels from './components/Examples/ActionPanels.vue';
+import Toggles from './components/Examples/Toggles.vue';
+import Checkbox from './components/Examples/Checkbox.vue';
+import SelectMenus from './components/Examples/SelectMenus.vue';
+import RadioGroups from './components/Examples/RadioGroups.vue';
 
 const log = (msg) => console.log(msg);
 </script>
@@ -264,6 +272,23 @@ const log = (msg) => console.log(msg);
     <EmptyStates />
 
     <Avatars />
+
+    <Steps />
+
+    <Navigation />
+
+    <Alerts />
+
+    <ActionPanels />
+
+    <Toggles />
+
+    <Checkbox />
+
+    <SelectMenus />
+
+    <RadioGroups />
+
     </div>
 </template>
 
