@@ -1,19 +1,9 @@
 <script setup>
 const props = defineProps({
-  rounded: {
-    type: String,
-    required: false,
-    default: 'full',
-  },
   type: {
     type: String,
     required: false,
     default: 'circTop',
-  },
-  size: {
-    type: String,
-    required: false,
-    default: '6',
   },
   iconSize: {
     type: String,
@@ -42,13 +32,10 @@ if (props.type === 'roundBot') {
 </script>
 
 <template>
-  <span class="inline-block relative">
-    <img :class="[`h-${props.size}`, `w-${props.size}`, `rounded-${props.rounded}`]" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-    <span :class="styles" v-if="props.type === 'roundBot'">
-      <span :class="['block rounded-full', `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]" />
+  <span :class="styles" v-if="props.type === 'roundBot'">
+      <span :class="['block rounded-full', `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]"/>
     </span>
-    <span :class="[styles, `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]" v-else />
-  </span>
+  <span :class="[styles, `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]" v-else/>
 </template>
 
 <style scoped>

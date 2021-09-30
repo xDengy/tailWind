@@ -24,9 +24,9 @@ if (props.type !== 'leftNotifications') {
 
 <template>
   <fieldset :class="fieldStyle">
-    <legend class="sr-only" v-if="props.type === 'notifications' || props.type === 'leftNotifications'">Notifications
+    <legend class="sr-only" v-if="props.type === 'notifications' || props.type === 'leftNotifications'">Уведомления
     </legend>
-    <legend class="sr-only" v-else-if="props.type === 'members'">Members</legend>
+    <legend class="sr-only" v-else-if="props.type === 'members'">Участники</legend>
     <div :class="styles" v-if="props.type === 'notifications' || props.type === 'members'">
 
       <slot v-if="props.type === 'notifications'"></slot>

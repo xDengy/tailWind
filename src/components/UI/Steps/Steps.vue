@@ -1,10 +1,6 @@
 <script setup>
+import {steps, circlesSteps} from '../.././Arrays/StepsArrays.vue'
 const props = defineProps({
-  type: {
-    type: String,
-    required: false,
-    default: 'simple',
-  },
   items: {
     type: Array,
     required: true,
@@ -13,10 +9,10 @@ const props = defineProps({
 import {CheckIcon} from '@heroicons/vue/outline'
 
 const styles = [];
-if (props.type === 'simple') {
+if (props.items === steps) {
   styles.push('space-y-4 md:flex md:space-y-0 md:space-x-8')
 }
-if (props.type === 'circles') {
+if (props.items === circlesSteps) {
   styles.push('overflow-hidden')
 }
 </script>
@@ -24,7 +20,7 @@ if (props.type === 'circles') {
 <template>
   <nav aria-label="Progress">
     <ol role="list" :class="styles">
-      <li v-for="item in items" :key="item.name" class="md:flex-1" v-if="props.type === 'simple'">
+      <li v-for="item in items" :key="item.name" class="md:flex-1" v-if="props.items === steps">
         <a v-if="item.status === 'complete'" :href="item.href" class="group pl-4 py-2 flex flex-col border-l-4 border-indigo-600 hover:border-indigo-800 md:pl-0 md:pt-4 md:pb-0 md:border-l-0 md:border-t-4">
           <span class="text-xs text-indigo-600 font-semibold tracking-wide uppercase group-hover:text-indigo-800">{{ item.id }}</span>
           <span class="text-sm font-medium">{{ item.name }}</span>
@@ -39,7 +35,7 @@ if (props.type === 'circles') {
         </a>
       </li>
 
-      <li v-for="(item, itemIndex) in items" :key="item.name" :class="[itemIndex !== items.length - 1 ? 'pb-10' : '', 'relative']" v-if="props.type === 'circles'">
+      <li v-for="(item, itemIndex) in items" :key="item.name" :class="[itemIndex !== items.length - 1 ? 'pb-10' : '', 'relative']" v-if="props.items === circlesSteps">
         <template v-if="item.status === 'complete'">
           <div v-if="(itemIndex !== items.length - 1)" class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-indigo-600" aria-hidden="true" />
           <a :href="item.href" class="relative flex items-start group">

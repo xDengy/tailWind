@@ -16,7 +16,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon} from '@heroicons/vue/outline'
 <template>
   <div v-if="props.type === 'simple'">
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-      Last 30 days
+      <slot></slot>
     </h3>
 
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -33,7 +33,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon} from '@heroicons/vue/outline'
 
   <div v-else-if="props.type === 'icon'">
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-      Last 30 days
+      <slot></slot>
     </h3>
 
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,7 +59,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon} from '@heroicons/vue/outline'
           <div class="absolute bottom-0 inset-x-0 bg-gray-50 px-4 py-4 sm:px-6">
             <div class="text-sm">
               <a :href="item.link" class="font-medium text-indigo-600 hover:text-indigo-500">
-                View all
+                Посмотреть все
                 <span class="sr-only"> {{ item.label }} stats</span>
               </a>
             </div>

@@ -34,7 +34,7 @@ const selected = ref(props.items[0])
           </div>
           <RadioGroupDescription as="div" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
             <div class="font-medium text-gray-900">{{ item.price }}</div>
-            <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
+            <div class="ml-1 text-gray-500 sm:ml-0">/мес</div>
           </RadioGroupDescription>
           <div :class="[checked ? 'border-indigo-500' : 'border-transparent', 'absolute -inset-px rounded-lg border-2 pointer-events-none']" aria-hidden="true" />
         </div>

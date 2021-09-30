@@ -36,8 +36,7 @@ import {
           </a>
         </h3>
         <p class="mt-2 text-sm text-gray-500">
-          Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo
-          et molestiae.
+          <slot></slot>
         </p>
       </div>
       <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"

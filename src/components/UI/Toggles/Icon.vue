@@ -1,19 +1,7 @@
-<script>
+<script setup>
 import { ref } from 'vue'
 import { Switch } from '@headlessui/vue'
-
-export default {
-  components: {
-    Switch,
-  },
-  setup() {
-    const enabled = ref(false)
-
-    return {
-      enabled,
-    }
-  },
-}
+const enabled = ref(false)
 </script>
 
 <template>

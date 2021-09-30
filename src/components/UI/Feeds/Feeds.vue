@@ -1,27 +1,24 @@
 <script setup>
+import {simple, stacked, multiple} from '../../Arrays/FeedsArrays.vue'
 const props = defineProps({
   items: {
     type: Array,
     required: true,
   },
-  arrayName: {
-    type: String,
-    required: true,
-  },
 });
 const divStyles = [];
-if (props.arrayName === 'Simple' || props.arrayName === 'Images') {
+if (props.items === simple || props.items === multiple) {
   divStyles.push('flow-root');
 }
-if (props.arrayName === 'Stacked') {
+if (props.items === stacked) {
   divStyles.push('');
 }
 
 const ulStyles = [];
-if (props.arrayName === 'Simple' || props.arrayName === 'Multiple') {
+if (props.items === simple || props.items === multiple) {
   ulStyles.push('-mb-8');
 }
-if (props.arrayName === 'Stacked') {
+if (props.items === stacked) {
   ulStyles.push('divide-y divide-gray-200');
 }
 
@@ -32,7 +29,7 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
 <template>
   <div :class="divStyles">
     <ul role="list" :class="ulStyles">
-      <li v-for="(item, itemIndex) in props.items" :key="item.id" v-if="props.arrayName === 'Simple'">
+      <li v-for="(item, itemIndex) in props.items" :key="item.id" v-if="props.items === simple">
         <div class="relative pb-8">
           <span v-if="(itemIndex !== props.items.length - 1)" class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
           <div class="relative flex space-x-3">
@@ -55,7 +52,7 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
         </div>
       </li>
 
-      <li v-for="item in props.items" :key="item.id" class="py-4" v-else-if="props.arrayName === 'Stacked'">
+      <li v-for="item in props.items" :key="item.id" class="py-4" v-else-if="props.items === stacked">
         <div class="flex space-x-3">
           <img class="h-6 w-6 rounded-full" :src="item.person.image" alt="" />
           <div class="flex-1 space-y-1">
@@ -63,12 +60,12 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
               <h3 class="text-sm font-medium">{{ item.person.name }}</h3>
               <p class="text-sm text-gray-500">{{ item.time }}</p>
             </div>
-            <p class="text-sm text-gray-500">Deployed {{ item.project }} ({{ item.commit }} in master) to {{ item.environment }}</p>
+            <p class="text-sm text-gray-500">Deployed {{ item.project }} ({{ item.commit }} в мастер) в {{ item.environment }}</p>
           </div>
         </div>
       </li>
 
-      <li v-for="(item, itemIndex) in props.items" :key="item.id" v-else-if="props.arrayName === 'Multiple'">
+      <li v-for="(item, itemIndex) in props.items" :key="item.id" v-else-if="props.items === multiple">
         <div class="relative pb-8">
           <span v-if="(itemIndex !== props.items.length - 1)" class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
           <div class="relative flex items-start space-x-3">
@@ -85,7 +82,7 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
                   <div class="text-sm">
                     <a :href="item.person.href" class="font-medium text-gray-900">{{ item.person.name }}</a>
                   </div>
-                  <p class="mt-0.5 text-sm text-gray-500">Commented {{ item.date }}</p>
+                  <p class="mt-0.5 text-sm text-gray-500">Прокоментировал {{ item.date }}</p>
                 </div>
                 <div class="mt-2 text-sm text-gray-700">
                   <p>
@@ -106,7 +103,7 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
                 <div class="text-sm text-gray-500">
                   <a :href="item.person.href" class="font-medium text-gray-900">{{ item.person.name }}</a>
                   {{ ' ' }}
-                  assigned
+                  назначил
                   {{ ' ' }}
                   <a :href="item.assigned.href" class="font-medium text-gray-900">{{ item.assigned.name }}</a>
                   {{ ' ' }}
@@ -127,7 +124,7 @@ import { ChatAltIcon, TagIcon, UserCircleIcon } from '@heroicons/vue/solid'
                   <span class="mr-0.5">
                     <a :href="item.person.href" class="font-medium text-gray-900">{{ item.person.name }}</a>
                     {{ ' ' }}
-                    added tags
+                    добавлены тэги
                   </span>
                   {{ ' ' }}
                   <span class="mr-0.5">

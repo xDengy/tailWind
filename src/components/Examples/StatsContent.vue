@@ -4,7 +4,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon, CursorClickIcon, MailOpenIcon, UsersIcon
 const stats = [
   {
     id: 1,
-    label: 'Total Subscribers',
+    label: 'Всего подписчиков',
     value: '71,897',
     difference: {
       type: 'increase',
@@ -18,7 +18,7 @@ const stats = [
   },
   {
     id: 2,
-    label: 'Avg. Open Rate',
+    label: 'Средняя статистика посещений',
     value: '58.16%',
     difference: {
       type: 'increase',
@@ -32,7 +32,7 @@ const stats = [
   },
   {
     id: 3,
-    label: 'Avg. Click Rate',
+    label: 'Средняя статистика кликов',
     value: '24.57%',
     difference: {
       type: 'decrease',
@@ -48,12 +48,16 @@ const stats = [
 </script>
 
 <template>
-  <h2 class="mt-5 mb-1 font-bold text-xl">Stats</h2>
-  <h5 class="mt-5 mb-1 font-bold text-m">Simple</h5>
-  <Stats :type="'simple'" :items="stats" />
+  <h2 class="mt-5 mb-1 font-bold text-xl">Статистика</h2>
+  <h5 class="mt-5 mb-1 font-bold text-m">Простая</h5>
+  <Stats type="simple" :items="stats">
+    За последние 30 дней
+  </Stats>
 
-  <h5 class="mt-5 mb-1 font-bold text-m">Icon</h5>
-  <Stats :type="'icon'" :items="stats" />
+  <h5 class="mt-5 mb-1 font-bold text-m">С иконками</h5>
+  <Stats type="icon" :items="stats">
+    За последние 30 дней
+  </Stats>
 </template>
 
 <style scoped>

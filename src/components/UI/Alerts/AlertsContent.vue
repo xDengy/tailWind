@@ -32,6 +32,12 @@ if (props.type === 'actions') {
   <div class="mt-2 text-sm text-green-700" v-else-if="props.type === 'actions'">
     <slot></slot>
   </div>
+
+  <div class="mt-4" v-else-if="props.type === 'button'">
+    <div class="-mx-2 -my-1.5 flex">
+      <slot></slot>
+    </div>
+  </div>
 </template>
 
 <style scoped>

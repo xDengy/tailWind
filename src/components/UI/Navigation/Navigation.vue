@@ -91,7 +91,7 @@ const props = defineProps({
     </div>
     <div class="mt-8">
       <h3 class="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider" id="projects-headline">
-        Projects
+        Проекты
       </h3>
       <div class="mt-1 space-y-1" aria-labelledby="projects-headline" v-if="second">
         <a v-for="item in second" :key="item.name" :href="item.href" class="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50">

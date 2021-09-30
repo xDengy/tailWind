@@ -6,26 +6,26 @@ import CheckboxTitle from '.././UI/Checkboxes/CheckboxTitle.vue'
 import CheckboxText from '.././UI/Checkboxes/CheckboxText.vue'
 
 const members = [
-  { id: 1, name: 'Annette Black' },
-  { id: 2, name: 'Cody Fisher' },
-  { id: 3, name: 'Courtney Henry' },
-  { id: 4, name: 'Kathryn Murphy' },
-  { id: 5, name: 'Theresa Webb' },
+  { id: 1, name: 'Анита Блэк' },
+  { id: 2, name: 'Коди Фишер' },
+  { id: 3, name: 'Кортни Генри' },
+  { id: 4, name: 'Кэтрин Мерфи' },
+  { id: 5, name: 'Тереза Вебб' },
 ]
 </script>
 
 <template>
-  <h2 class="mt-5 mb-1 font-bold text-xl">Checkboxes</h2>
-  <h5 class="mt-5 mb-1 font-bold text-m">List with checkbox on right</h5>
+  <h2 class="mt-5 mb-1 font-bold text-xl">Флажки</h2>
+  <h5 class="mt-5 mb-1 font-bold text-m">Список флажков справа</h5>
   <div class="w-full max-w-lg mx-auto">
       <CheckboxRight>
         <CheckboxContent>
           <CheckboxItem name="comments">
             <CheckboxTitle name="comments">
-              Comments
+              Комментарии
             </CheckboxTitle>
             <CheckboxText name="comments">
-              Get notified when someones posts a comment on a posting.
+              Получать уведомления, когда кто-то публикует комментарий к публикации.
             </CheckboxText>
           </CheckboxItem>
         </CheckboxContent>
@@ -33,10 +33,10 @@ const members = [
         <CheckboxContent>
           <CheckboxItem name="candidates">
             <CheckboxTitle name="candidates">
-              Candidates
+              Кандидаты
             </CheckboxTitle>
             <CheckboxText name="candidates">
-              Get notified when a candidate applies for a job.
+              Получать уведомления, когда кандидат подает заявку на работу.
             </CheckboxText>
           </CheckboxItem>
         </CheckboxContent>
@@ -44,31 +44,31 @@ const members = [
         <CheckboxContent>
           <CheckboxItem name="offers">
             <CheckboxTitle name="offers">
-              Offers
+              Предложения
             </CheckboxTitle>
             <CheckboxText name="offers">
-              Get notified when a candidate accepts or rejects an offer.
+              Получать уведомления, когда кандидат принимает или отклоняет предложение.
             </CheckboxText>
           </CheckboxItem>
         </CheckboxContent>
       </CheckboxRight>
   </div>
 
-  <h5 class="mt-5 mb-1 font-bold text-m">Simple list with heading</h5>
+  <h5 class="mt-5 mb-1 font-bold text-m">Простой список с заголовком </h5>
   <div class="w-full max-w-lg mx-auto">
     <CheckboxRight type="members" :items="members" />
   </div>
 
-  <h5 class="mt-5 mb-1 font-bold text-m">List with description</h5>
+  <h5 class="mt-5 mb-1 font-bold text-m">Список с описанием</h5>
   <div class="w-full max-w-lg mx-auto">
     <CheckboxRight type="leftNotifications">
       <CheckboxContent type="leftNotifications">
         <CheckboxItem type="leftNotifications" name="comments">
           <CheckboxTitle name="comments">
-            Comments
+            Комментарии
           </CheckboxTitle>
           <CheckboxText name="comments">
-            Get notified when someones posts a comment on a posting.
+            Получать уведомления, когда кто-то публикует комментарий к публикации.
           </CheckboxText>
         </CheckboxItem>
       </CheckboxContent>
@@ -76,10 +76,10 @@ const members = [
       <CheckboxContent type="leftNotifications">
         <CheckboxItem type="leftNotifications" name="candidates">
           <CheckboxTitle name="candidates">
-            Candidates
+            Кандидаты
           </CheckboxTitle>
           <CheckboxText name="candidates">
-            Get notified when a candidate applies for a job.
+            Получать уведомления, когда кандидат подает заявку на работу.
           </CheckboxText>
         </CheckboxItem>
       </CheckboxContent>
@@ -87,10 +87,10 @@ const members = [
       <CheckboxContent type="leftNotifications">
         <CheckboxItem type="leftNotifications" name="offers">
           <CheckboxTitle name="offers">
-            Offers
+            Предложения
           </CheckboxTitle>
           <CheckboxText name="offers">
-            Get notified when a candidate accepts or rejects an offer.
+            Получать уведомления, когда кандидат принимает или отклоняет предложение.
           </CheckboxText>
         </CheckboxItem>
       </CheckboxContent>

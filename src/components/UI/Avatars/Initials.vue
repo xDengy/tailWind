@@ -30,7 +30,9 @@ if (props.textSize) {
 
 <template>
   <span :class="[`inline-flex items-center justify-center rounded-full bg-gray-500`, `h-${props.size}`, `w-${props.size}`]">
-    <span :class="styles">TW</span>
+    <span :class="styles">
+      <slot></slot>
+    </span>
   </span>
 </template>
 

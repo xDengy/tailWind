@@ -4,10 +4,6 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-  arrayName: {
-    type: String,
-    required: true,
-  },
 });
 
 import {
@@ -38,7 +34,7 @@ import {
                 <div class="hidden md:block">
                   <div>
                     <p class="text-sm text-gray-900">
-                      Applied on
+                      Применен
                       {{ ' ' }}
                       <time :datetime="item.date">{{ item.dateFull }}</time>
                     </p>

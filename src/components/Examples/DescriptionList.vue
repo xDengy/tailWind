@@ -12,17 +12,17 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
 </script>
 
 <template>
-  <h2 class="mt-5 mb-1 font-bold text-xl">Description List</h2>
-  <h5 class="mt-5 mb-1 font-bold text-m">Left-aligned in card</h5>
+  <h2 class="mt-5 mb-1 font-bold text-xl">Список описаний</h2>
+  <h5 class="mt-5 mb-1 font-bold text-m">Окно прижатое к левому краю</h5>
   <div class="flex mx-auto max-w-4xl">
     <DescriptionList>
       <DescriptionListsHeader>
         <DescriptionListsTitle>
-          Applicant Information
+          Информация о заявителе
         </DescriptionListsTitle>
 
         <DescriptionListsSubtitle>
-          Personal details and application.
+          Личные данные и заявление.
         </DescriptionListsSubtitle>
       </DescriptionListsHeader>
 
@@ -30,27 +30,27 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
         <DescriptionListsItems>
           <DescriptionListsItem>
             <DescriptionListsKey>
-              Full name
+              Полное имя
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              Margot Foster
+              Марго Фостер
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem>
             <DescriptionListsKey>
-              Application for
+              Приложение для
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              Backend Developer
+              Backend разработчика
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem>
             <DescriptionListsKey>
-              Email address
+              Адрес электронной почты
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -60,17 +60,17 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
 
           <DescriptionListsItem>
             <DescriptionListsKey>
-              Salary expectation
+              Пожелания по зарплате
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              $120,000
+              120,000 руб.
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem>
             <DescriptionListsKey>
-              About
+              О себе
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -82,7 +82,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
 
           <DescriptionListsItem>
             <DescriptionListsKey>
-              Attachments
+              Вложения
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -96,7 +96,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
                   </div>
                   <div class="ml-4 flex-shrink-0">
                     <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                      Download
+                      Загрузить
                     </a>
                   </div>
                 </li>
@@ -109,7 +109,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
                   </div>
                   <div class="ml-4 flex-shrink-0">
                     <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                      Download
+                      Загрузить
                     </a>
                   </div>
                 </li>
@@ -122,16 +122,16 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
     </DescriptionList>
   </div>
 
-  <h5 class="mt-5 mb-1 font-bold text-m">Two-column in card</h5>
+  <h5 class="mt-5 mb-1 font-bold text-m">Окно с двумя столбцами</h5>
   <div class="flex mx-auto max-w-4xl">
     <DescriptionList>
       <DescriptionListsHeader>
         <DescriptionListsTitle>
-          Applicant Information
+          Информация о заявителе
         </DescriptionListsTitle>
 
         <DescriptionListsSubtitle>
-          Personal details and application.
+          Личные данные и заявление.
         </DescriptionListsSubtitle>
       </DescriptionListsHeader>
 
@@ -139,27 +139,27 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
         <DescriptionListsItems type="column">
           <DescriptionListsItem type="column" col="1">
             <DescriptionListsKey>
-              Full name
+              Полное имя
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              Margot Foster
+              Марго Фостер
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem type="column" col="1">
             <DescriptionListsKey>
-              Application for
+              Приложение для
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              Backend Developer
+              Backend разработчика
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem type="column" col="1">
             <DescriptionListsKey>
-              Email address
+              Адрес электронной почты
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -169,17 +169,17 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
 
           <DescriptionListsItem type="column" col="1">
             <DescriptionListsKey>
-              Salary expectation
+              Пожелания по зарплате
             </DescriptionListsKey>
 
             <DescriptionListsValue>
-              $120,000
+              120,000 руб.
             </DescriptionListsValue>
           </DescriptionListsItem>
 
           <DescriptionListsItem type="column" col="2">
             <DescriptionListsKey>
-              About
+              О себе
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -191,7 +191,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
 
           <DescriptionListsItem type="column" col="2">
             <DescriptionListsKey>
-              Attachments
+              Вложения
             </DescriptionListsKey>
 
             <DescriptionListsValue>
@@ -205,7 +205,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
                   </div>
                   <div class="ml-4 flex-shrink-0">
                     <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                      Download
+                      Загрузить
                     </a>
                   </div>
                 </li>
@@ -218,7 +218,7 @@ import {PaperClipIcon} from "@heroicons/vue/solid";
                   </div>
                   <div class="ml-4 flex-shrink-0">
                     <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                      Download
+                      Загрузить
                     </a>
                   </div>
                 </li>
