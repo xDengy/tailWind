@@ -16,7 +16,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon} from '@heroicons/vue/outline'
 <template>
   <div v-if="props.type === 'simple'">
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-      <slot></slot>
+      <slot name="title"></slot>
     </h3>
 
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -33,7 +33,7 @@ import {ArrowSmUpIcon, ArrowSmDownIcon} from '@heroicons/vue/outline'
 
   <div v-else-if="props.type === 'icon'">
     <h3 class="text-lg leading-6 font-medium text-gray-900">
-      <slot></slot>
+      <slot name="title"></slot>
     </h3>
 
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

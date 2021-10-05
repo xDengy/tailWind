@@ -14,7 +14,9 @@ const plans = [
   <h5 class="mt-5 mb-1 font-bold text-m">Сложенные карточки</h5>
   <div class="w-full max-w-xl mx-auto">
     <Simple :items="plans">
-      Размер сервера
+      <template v-slot:title>
+        Размер сервера
+      </template>
     </Simple>
   </div>
 </template>

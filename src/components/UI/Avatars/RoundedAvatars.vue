@@ -1,20 +1,14 @@
 <script setup>
 const props = defineProps({
-  rounded: {
-    type: String,
+  items: {
+    type: Array,
     required: false,
-    default: 'full',
-  },
-  size: {
-    type: String,
-    required: false,
-    default: '6',
   },
 });
 </script>
 
 <template>
-  <img :class="['inline-block', `h-${props.size}`, `w-${props.size}`, `rounded-${props.rounded}`]" alt=""  src=""/>
+  <img v-for="item in props.items" :class="['inline-block', `h-${item.size}`, `w-${item.size}`, `rounded-${item.rounded}`]" alt="" :src="item.src" />
 </template>
 
 <style scoped>

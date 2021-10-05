@@ -36,7 +36,7 @@ import {
           </a>
         </h3>
         <p class="mt-2 text-sm text-gray-500">
-          <slot></slot>
+          <slot name="text"></slot>
         </p>
       </div>
       <span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"

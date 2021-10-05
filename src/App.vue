@@ -8,22 +8,32 @@ import ButtonGroup from './components/UI/ButtonGroup.vue';
 import {MailIcon, PlusSmIcon as PlusSmIconSolid} from '@heroicons/vue/solid'
 import {PlusSmIcon as PlusSmIconOutline} from '@heroicons/vue/outline'
 
-import DescriptionList from './components/Examples/DescriptionList.vue';
-import EmptyStates from './components/Examples/EmptyStates.vue';
-import Avatars from './components/Examples/Avatars.vue';
+// Компонентами
 
-import Feeds from './components/ExamplesTest/FeedsTest.vue';
-import Steps from './components/ExamplesTest/StepsTest.vue';
-import Stats from './components/ExamplesTest/StatsTest.vue';
-import StackedList from './components/ExamplesTest/StackedListTest.vue';
-import ActionPanels from './components/ExamplesTest/ActionPanelsTest.vue';
-import Alerts from './components/ExamplesTest/AlertsTest.vue';
-import GridList from './components/ExamplesTest/GridListTest.vue';
+import ActionPanel from './components/Examples/ActionPanel.vue';
+import Alert from './components/Examples/Alert.vue';
+import DescriptionList from './components/Examples/DescriptionList.vue';
+import SelectMenu from './components/Examples/SelectMenu.vue';
 import Toggles from './components/Examples/Toggles.vue';
-import RadioGroups from './components/Examples/RadioGroups.vue';
-import SelectMenus from './components/ExamplesTest/SelectMenusTest.vue';
-import Checkbox from './components/ExamplesTest/CheckboxTest.vue';
-import Navigation from './components/ExamplesTest/NavigationTest.vue';
+
+// Слотами
+
+
+// Пропсами
+
+import Feed from './components/Examples/Feed.vue';
+import StackedList from './components/Examples/StackedList.vue';
+import Steps from './components/Examples/Steps.vue';
+
+// Смешанные
+
+import Avatar from './components/Examples/Avatar.vue';
+import Checkbox from './components/Examples/Checkbox.vue';
+import EmptyState from './components/Examples/EmptyState.vue';
+import GridList from './components/Examples/GridList.vue';
+import Navigation from './components/Examples/Navigation.vue';
+import RadioGroup from './components/Examples/RadioGroup.vue';
+import Stats from './components/Examples/Stats.vue';
 
 const log = (msg) => console.log(msg);
 </script>
@@ -272,27 +282,27 @@ const log = (msg) => console.log(msg);
 
     <GridList/>
 
-    <Feeds/>
+    <Feed/>
 
-    <EmptyStates/>
+    <EmptyState/>
 
-    <Avatars/>
+    <Avatar/>
 
     <Steps/>
 
     <Navigation/>
 
-    <Alerts/>
+    <Alert/>
 
-    <ActionPanels/>
+    <ActionPanel/>
 
     <Toggles/>
 
     <Checkbox/>
 
-    <SelectMenus/>
+    <SelectMenu/>
 
-    <RadioGroups/>
+    <RadioGroup/>
 
   </div>
 </template>

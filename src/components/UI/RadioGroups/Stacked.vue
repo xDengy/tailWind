@@ -13,7 +13,7 @@ const selected = ref(props.items[0])
 <template>
   <RadioGroup v-model="selected">
     <RadioGroupLabel class="sr-only">
-      <slot></slot>
+      <slot name="title"></slot>
     </RadioGroupLabel>
     <div class="space-y-4">
       <RadioGroupOption as="template" v-for="item in props.items" :key="item.name" :value="item" v-slot="{ active, checked }">

@@ -32,10 +32,7 @@ if (props.type === 'roundBot') {
 </script>
 
 <template>
-  <span :class="styles" v-if="props.type === 'roundBot'">
-      <span :class="['block rounded-full', `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]"/>
-    </span>
-  <span :class="[styles, `h-${props.iconSize}`, `w-${props.iconSize}`, `bg-${props.color}`]" v-else/>
+
 </template>
 
 <style scoped>

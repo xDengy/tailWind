@@ -10,6 +10,10 @@ const props = defineProps({
     required: false,
     default: 'bot',
   },
+  items: {
+    type: Array,
+    required: false
+  }
 });
 const styles = ['flex overflow-hidden'];
 if (props.type === 'top') {
@@ -19,7 +23,13 @@ if (props.type === 'top') {
 
 <template>
   <div :class="[styles, `-space-x-${props.size}`]">
-    <slot></slot>
+    <img v-for="item in items"
+         :class="['inline-block rounded-full ring-2 ring-white relative', `z-${item.indexSize}`, `h-${item.imgSize}`, `w-${item.imgSize}`]"
+         :src="item.src" alt="" v-if="props.type === 'top'"/>
+
+    <img v-for="item in items"
+         :class="['inline-block rounded-full ring-2 ring-white', `h-${item.imgSize}`, `w-${item.imgSize}`]"
+         :src="item.src" alt="" v-else/>
   </div>
 </template>
 

@@ -14,7 +14,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <img :class="[`h-${props.size}`, `w-${props.size}`, `rounded-${props.rounded}`]" src="" alt=""/>
 </template>
 
 <style scoped>

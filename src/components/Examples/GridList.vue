@@ -169,8 +169,10 @@ const actions = [
   <h5 class="mt-5 mb-1 font-bold text-m">Действия с общими границами</h5>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <ActionCards :items="actions">
-      Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo
-      et molestiae.
+      <template v-slot:text>
+        Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo
+        et molestiae.
+      </template>
     </ActionCards>
   </div>
 

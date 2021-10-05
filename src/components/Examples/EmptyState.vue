@@ -12,27 +12,27 @@ import StatesButtonText from '.././UI/EmptyStates/StatesButtonText.vue'
   <h5 class="mt-5 mb-1 font-bold text-m">Простые</h5>
   <div class="bg-white px-4 py-12">
     <SimpleStates>
-      <StatesTitle>
+      <template v-slot:title>
         Нет проектов
-      </StatesTitle>
+      </template>
 
-      <StatesSubtitle>
+      <template v-slot:subtitle>
         Начните, создав новый проект.
-      </StatesSubtitle>
+      </template>
 
-      <StatesButton>
-        Новый проект
-      </StatesButton>
+      <template v-slot:button>
+        <StatesButton>
+          Новый проект
+        </StatesButton>
+      </template>
     </SimpleStates>
   </div>
 
   <h5 class="mt-5 mb-1 font-bold text-m">С пунктирной границей</h5>
   <div class="max-w-lg mx-auto">
-    <BorderStates>
-      <StatesButtonText>
-        Создать новую базу данных
-      </StatesButtonText>
-    </BorderStates>
+    <StatesButton type="border">
+      Создать новую базу данных
+    </StatesButton>
   </div>
 </template>
 
