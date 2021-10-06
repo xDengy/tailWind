@@ -1,5 +1,5 @@
 <script setup>
-import Stats from '.././UI/Stats/Stats.vue'
+import Stat from '../UI/Stat/Stat.vue'
 import {ArrowSmUpIcon, ArrowSmDownIcon, CursorClickIcon, MailOpenIcon, UsersIcon} from "@heroicons/vue/outline";
 const stats = [
   {
@@ -50,18 +50,18 @@ const stats = [
 <template>
   <h2 class="mt-5 mb-1 font-bold text-xl">Статистика</h2>
   <h5 class="mt-5 mb-1 font-bold text-m">Простая</h5>
-  <Stats type="simple" :items="stats">
+  <Stat type="simple" :items="stats">
     <template v-slot:title>
       За последние 30 дней
     </template>
-  </Stats>
+  </Stat>
 
   <h5 class="mt-5 mb-1 font-bold text-m">С иконками</h5>
-  <Stats type="icon" :items="stats">
+  <Stat type="icon" :items="stats">
     <template v-slot:title>
       За последние 30 дней
     </template>
-  </Stats>
+  </Stat>
 </template>
 
 <style scoped>

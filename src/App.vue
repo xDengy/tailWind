@@ -10,10 +10,10 @@ import {PlusSmIcon as PlusSmIconOutline} from '@heroicons/vue/outline'
 
 // Компонентами
 
-import ActionPanel from './components/Examples/ActionPanel.vue';
-import Alert from './components/Examples/Alert.vue';
-import DescriptionList from './components/Examples/DescriptionList.vue';
-import SelectMenu from './components/Examples/SelectMenu.vue';
+import ActionPanels from './components/Examples/ActionPanels.vue';
+import Alerts from './components/Examples/Alerts.vue';
+import DescriptionLists from './components/Examples/DescriptionLists.vue';
+import SelectMenus from './components/Examples/SelectMenus.vue';
 import Toggles from './components/Examples/Toggles.vue';
 
 // Слотами
@@ -21,18 +21,18 @@ import Toggles from './components/Examples/Toggles.vue';
 
 // Пропсами
 
-import Feed from './components/Examples/Feed.vue';
-import StackedList from './components/Examples/StackedList.vue';
+import Feeds from './components/Examples/Feeds.vue';
+import StackedLists from './components/Examples/StackedLists.vue';
 import Steps from './components/Examples/Steps.vue';
 
 // Смешанные
 
-import Avatar from './components/Examples/Avatar.vue';
-import Checkbox from './components/Examples/Checkbox.vue';
-import EmptyState from './components/Examples/EmptyState.vue';
-import GridList from './components/Examples/GridList.vue';
-import Navigation from './components/Examples/Navigation.vue';
-import RadioGroup from './components/Examples/RadioGroup.vue';
+import Avatars from './components/Examples/Avatars.vue';
+import Checkboxes from './components/Examples/Checkboxes.vue';
+import EmptyStates from './components/Examples/EmptyStates.vue';
+import GridLists from './components/Examples/GridLists.vue';
+import Navigations from './components/Examples/Navigations.vue';
+import RadioGroups from './components/Examples/RadioGroups.vue';
 import Stats from './components/Examples/Stats.vue';
 
 const log = (msg) => console.log(msg);
@@ -274,35 +274,35 @@ const log = (msg) => console.log(msg);
 
   <div class="p-5">
 
-    <DescriptionList/>
+    <DescriptionLists/>
 
-    <StackedList/>
+    <StackedLists/>
 
     <Stats/>
 
-    <GridList/>
+    <GridLists/>
 
-    <Feed/>
+    <Feeds/>
 
-    <EmptyState/>
+    <EmptyStates/>
 
-    <Avatar/>
+    <Avatars/>
 
     <Steps/>
 
-    <Navigation/>
+    <Navigations/>
 
-    <Alert/>
+    <Alerts/>
 
-    <ActionPanel/>
+    <ActionPanels/>
 
     <Toggles/>
 
-    <Checkbox/>
+    <Checkboxes/>
 
-    <SelectMenu/>
+    <SelectMenus/>
 
-    <RadioGroup/>
+    <RadioGroups/>
 
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import Icon from '.././UI/Toggles/Icon.vue'
+import Icon from '../UI/Toggle/Icon.vue'
 </script>
 
 <template>
